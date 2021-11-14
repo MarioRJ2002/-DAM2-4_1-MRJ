@@ -131,7 +131,11 @@ class Módulo (maxAlumnos:Int){
         }
         return lista
     }
-
+    
+    fun bajaAlumno(idAlumno: String){
+        alumnos[alumnos.indexOfFirst { it?.id==idAlumno }]=null
+    }
+    
     companion object{
         val EVALUCION_PRIMERA="0"
         val EVALUCION_SEGUNDA="1"
